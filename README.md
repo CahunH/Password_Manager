@@ -22,27 +22,16 @@ Open a terminal (or Command Prompt/PowerShell on Windows) and clone your GitHub 
     
     cd password_manager
 
-Run Docker Compose:
+Build docker image:
 
-Ensure you are in the root directory of the project where the docker-compose.yml file is located, and then run:
+    docker build -t password_manager-password_manager .
 
-    docker-compose up --build
 
-This command will build the Docker image and start the container.
+Accessing the Application:
 
-Accessing the Application
-
-Once the container is running, you can interact with the password manager through the Docker container's shell.
-
-To open a shell into the running container, run:
-
-    docker exec -it password_manager_password_manager_1 /bin/bash
-
-This command opens a bash shell in the running container (adjust the container name if necessary).
-
-From there, you can run the password manager:
-
-    python app/main.py
+    docker run -it --rm \
+        -v /path/to/local/data:/data \
+        password_manager-password_manager
 
 Example Usage
 
@@ -57,7 +46,7 @@ Exiting
 
 To stop the application, press Ctrl+C in the terminal where Docker Compose is running. Then, you can shut down the Docker container with:
 
-    docker-compose down
+    you can use the number 4 to exit and docker also stop the conatiner
 
 Troubleshooting
 
