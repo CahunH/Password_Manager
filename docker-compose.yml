@@ -1,10 +1,11 @@
-version: '3.8'
-
+version: '3'
 services:
   password_manager:
     build: .
+    working_dir: /usr/src/app
     container_name: password_manager
     volumes:
-      - ./data:/usr/src/app
+      - .:/usr/src/app
+    command: python app/main.py
     stdin_open: true
     tty: true
