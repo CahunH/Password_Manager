@@ -1,4 +1,4 @@
-you can run this Dockerized password manager application on any machine that supports Docker, including Linux, Windows, and macOS. Below are the steps to set up and run the project on each of these operating systems.
+You can run this Dockerized password manager application on any machine that supports Docker, including Linux, Windows, and macOS. Below are the steps to set up and run the project on each of these operating systems.
 Prerequisites
 
     Install Docker:
