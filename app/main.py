@@ -2,8 +2,8 @@ from app.manager import generate_key, save_key, load_key, add_password, retrieve
 import os
 
 def main():
-    key_file = '/usr/src/app/data/key.key'
-    password_file = '/usr/src/app/data/passwords.json'
+    key_file = '/data/key.key'
+    password_file = '/data/passwords.json'
 
     os.makedirs(os.path.dirname(key_file), exist_ok=True)
 
