@@ -6,7 +6,11 @@ services:
       context: .
     working_dir: /usr/src/app
     volumes:
-      - .:/usr/src/app
+      - .:/usr/src/app           # Bind mount the project directory
+      - password_data:/usr/src/app/data  # Named volume for persistence
+    command: python app/main.py
     stdin_open: true
     tty: true
-    command: python app/main.py
+
+volumes:
+  password_data:
