@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  password_manager:
+    build: .
+    container_name: password_manager
+    volumes:
+      - ./data:/usr/src/app
+    stdin_open: true
+    tty: true
